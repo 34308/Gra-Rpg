@@ -7,7 +7,7 @@ public class FollowingUser : MonoBehaviour
 {
     public NavMeshAgent enemy;
 
-    public Transform Player;
+    public Transform player;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +17,6 @@ public class FollowingUser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemy.SetDestination(Player.position);
+        enemy.SetDestination(player.position);
     }
 }
