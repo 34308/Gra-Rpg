@@ -22,6 +22,15 @@ public class TopDownCharacterMover : MonoBehaviour
     [SerializeField]
     private Camera Camera;
 
+    public CharacterController Controller;
+
+    public Transform Cam;
+
+    public float TurnSmoothTime = 0.1f;
+
+    private float _trunSmoothVelocity;
+    public float Gravity = 100f;
+
     private void Awake()
     {
         _input = GetComponent<InputHandler>();
@@ -30,19 +39,20 @@ public class TopDownCharacterMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        var targetVector = new Vector3(_input.InputVector.x, 0, _input.InputVector.y);
-        var movementVector = MoveTowardTarget(targetVector);
-
-        if (!RotateTowardMouse)
+        var horizontal = Input.GetAxisRaw("Horizontal");
+        var vertical = Input.GetAxisRaw("Vertical");
+        var direction = new Vector3(horizontal, 0f, vertical).normalized;
+        if (direction.magnitude >= 0.1f)
         {
-            RotateTowardMovementVector(movementVector);
-        }
-        if (RotateTowardMouse)
-        {
-            RotateFromMouseVector();
-        }
+            var targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + Cam.eulerAngles.y;
+            var angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _trunSmoothVelocity,
+                TurnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
+            var moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+            moveDir.y -= Gravity * Time.deltaTime;
+            Controller.Move(moveDir.normalized * (MovementSpeed * Time.deltaTime));
+        }
     }
 
     private void RotateFromMouseVector()
