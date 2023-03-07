@@ -2,18 +2,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(InputHandler))]
 public class TopDownCharacterMover : MonoBehaviour
 {
     private InputHandler _input;
 
+    [Space][SerializeField]
+    private InputActionAsset PlayerActions;
+    [SerializeField]
+    private InputAction movement;
     [SerializeField]
     private bool RotateTowardMouse;
 
     [SerializeField]
     private Transform MousePositon;
-
+    [SerializeField]
+    private float SprintModifier;
     [SerializeField]
     private float MovementSpeed;
     [SerializeField]
@@ -47,19 +52,25 @@ public class TopDownCharacterMover : MonoBehaviour
 
     private void RotateFromMouseVector()
     {
-        Ray ray = Camera.ScreenPointToRay(_input.MousePosition);
-
-        if (Physics.Raycast(ray, out RaycastHit hitInfo, maxDistance: 300f))
-        {
-            var target = MousePositon.position;
-            target.y = transform.position.y;
-            transform.LookAt(target);
-        }
+        var target = MousePositon.position;
+        target.y = transform.position.y;
+        transform.LookAt(target);
+       
     }
 
     private Vector3 MoveTowardTarget(Vector3 targetVector)
     {
         var speed = MovementSpeed * Time.deltaTime;
+        if (_input.sprint)
+        {
+            speed = MovementSpeed * SprintModifier * Time.deltaTime;
+
+        }
+        else
+        {
+             speed = MovementSpeed* Time.deltaTime;
+        }
+        
         // transform.Translate(targetVector * (MovementSpeed * Time.deltaTime)); Demonstrate why this doesn't work
         //transform.Translate(targetVector * (MovementSpeed * Time.deltaTime), Camera.gameObject.transform);
 
