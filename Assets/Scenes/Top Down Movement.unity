@@ -1510,7 +1510,7 @@ MonoBehaviour:
     m_Flags: 0
   RotateTowardMouse: 1
   MousePositon: {fileID: 1064734555}
-  SprintModifier: 2
+  SprintModifier: 1.5
   MovementSpeed: 4
   RotationSpeed: 5
   Camera: {fileID: 963194227}
