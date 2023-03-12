@@ -18,7 +18,7 @@ public class InputHandler : MonoBehaviour
         }
         else if(Input.GetKeyUp(KeyCode.LeftShift))
         {
-            sprint =false;
+            sprint = false;
         }
         InputVector = new Vector2(h, v);
 

@@ -23,10 +23,14 @@ public class TopDownCharacterMover : MonoBehaviour
     private float MovementSpeed;
     [SerializeField]
     private float RotationSpeed;
-
+    Animator animator;
     [SerializeField]
     private Camera Camera;
-
+    private void Start()
+    {
+       
+        animator = GetComponent<Animator>();
+    }
     private void Awake()
     {
         _input = GetComponent<InputHandler>();
@@ -50,25 +54,59 @@ public class TopDownCharacterMover : MonoBehaviour
 
     }
 
+   
     private void RotateFromMouseVector()
     {
         var target = MousePositon.position;
-        target.y = transform.position.y;
-        transform.LookAt(target);
-       
+        target.y = transform.GetChild(2).transform.position.y;
+        
+        transform.GetChild(2).transform.LookAt(target);
+        
     }
+    [ExecuteInEditMode]
+    void OnAnimatorMove()
+    {
+        
+        if (animator)
+        {
 
+            animator.ApplyBuiltinRootMotion();
+            
+            var target = MousePositon.position;
+            target.y = 100;
+            transform.GetChild(2).LookAt(target);
+            Debug.Log("works");
+        }
+    }
     private Vector3 MoveTowardTarget(Vector3 targetVector)
     {
         var speed = MovementSpeed * Time.deltaTime;
+        Debug.Log(_input.sprint);
         if (_input.sprint)
         {
             speed = MovementSpeed * SprintModifier * Time.deltaTime;
-
+            if (_input.InputVector.x != 0 || _input.InputVector.y != 0) {
+                animator.SetBool("IsRunning", true);
+                animator.SetBool("IsMoving", true);
+            }
+              
         }
         else
         {
-             speed = MovementSpeed* Time.deltaTime;
+            if (_input.InputVector.x != 0 || _input.InputVector.y != 0)
+            {
+                animator.SetBool("IsMoving", true);
+                animator.SetBool("IsRunning", false);
+            }
+            else 
+            if (_input.InputVector.x == 0 &&_input.InputVector.y==0)
+            {
+                animator.SetBool("IsMoving", false);
+                animator.SetBool("IsRunning", false);
+            }
+            
+           
+            speed = MovementSpeed* Time.deltaTime;
         }
         
         // transform.Translate(targetVector * (MovementSpeed * Time.deltaTime)); Demonstrate why this doesn't work
