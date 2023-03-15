@@ -73,7 +73,7 @@ public class TopDownCharacterMover : MonoBehaviour
             animator.ApplyBuiltinRootMotion();
             
             var target = MousePositon.position;
-            target.y = 100;
+            target.y = 1000;
             transform.GetChild(2).LookAt(target);
             Debug.Log("works");
         }
