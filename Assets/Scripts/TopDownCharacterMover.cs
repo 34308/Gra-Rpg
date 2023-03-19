@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
 public class TopDownCharacterMover : MonoBehaviour
 {
     private InputHandler _input;
@@ -77,7 +76,58 @@ public class TopDownCharacterMover : MonoBehaviour
             var target = MousePositon.position;
             target.y = 1000;
             transform.GetChild(2).LookAt(target);
+
+            var targetVector = new Vector3(_input.InputVector.x, 0, _input.InputVector.y);
+            targetVector = Quaternion.Euler(0, Camera.gameObject.transform.rotation.eulerAngles.y, 0) * targetVector;
+            var rotation = transform.GetChild(2).rotation.eulerAngles;
             
+            if ((targetVector.x >= -1.0f && targetVector.x <= 1.0f) && targetVector.z == 1.0f) {
+                //N
+                
+                if(!(rotation.y>275 && rotation.y<360) && !(rotation.y > 0 && rotation.y <= 88))
+                {
+                    var Y=Math.Sqrt(Math.Pow(rotation.y - 275, 2)); 
+                    var Y2= Math.Sqrt(Math.Pow(rotation.y - 360, 2)); 
+                    var Y3 = Math.Sqrt(Math.Pow(rotation.y - 0, 2)); 
+                    var Y4 = Math.Sqrt(Math.Pow(rotation.y - 88,2));
+                    var min= Math.Min(Y, Math.Min(Y2, Math.Min(Y3,Y4)));
+                    if (Y == min)
+                    {
+                        rotation.y = 275;
+                    }else if (Y2 == min)
+                    {
+                        rotation.y = 360;
+                    }
+                    else if(Y3==min){
+                        rotation.y = 0;
+                    }
+                    else if(Y4==min)
+                    {
+                        rotation.y = 88;
+                    }
+                }
+                
+            }
+            else if (targetVector.x == 1.0f && (targetVector.z >= -1.0f && targetVector.z <= 1.0f)) {
+                //E
+                
+                rotation.y = Mathf.Clamp(rotation.y, 0, 170);
+             
+            }
+        
+          
+            else if (targetVector.x == -1.0f &&  (targetVector.z <= 1.0f && targetVector.z >= -1.0f)) {
+                //w
+
+                rotation.y = Mathf.Clamp(rotation.y, 194, 350);
+            }
+            else if ((targetVector.x >= -1.0f && targetVector.x <= 1.0f) && targetVector.z == -1.0f) {
+                //s
+                rotation.y = Mathf.Clamp(rotation.y, 90, 270);
+            }
+            transform.GetChild(2).rotation=Quaternion.Euler(rotation);
+         
+
         }
     }
     private Vector3 MoveTowardTarget(Vector3 targetVector)
@@ -111,9 +161,7 @@ public class TopDownCharacterMover : MonoBehaviour
             speed = MovementSpeed* Time.deltaTime;
         }
         
-        // transform.Translate(targetVector * (MovementSpeed * Time.deltaTime)); Demonstrate why this doesn't work
-        //transform.Translate(targetVector * (MovementSpeed * Time.deltaTime), Camera.gameObject.transform);
-
+       
         targetVector = Quaternion.Euler(0, Camera.gameObject.transform.rotation.eulerAngles.y, 0) * targetVector;
         var targetPosition = transform.position + targetVector * speed;
         transform.position = targetPosition;

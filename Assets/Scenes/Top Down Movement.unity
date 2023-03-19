@@ -2336,6 +2336,16 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 543450651814456543}
+    - target: {fileID: 3703672709202317235, guid: 589b930ee8d896a48bbf773f11593d04,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703672709202317235, guid: 589b930ee8d896a48bbf773f11593d04,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3813616265726000180, guid: 589b930ee8d896a48bbf773f11593d04,
         type: 3}
       propertyPath: m_RootOrder
@@ -2395,6 +2405,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: slime
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586774818720818830, guid: 589b930ee8d896a48bbf773f11593d04,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4586774818720818830, guid: 589b930ee8d896a48bbf773f11593d04,
         type: 3}
@@ -2475,6 +2490,21 @@ PrefabInstance:
       propertyPath: MousePositon
       value: 
       objectReference: {fileID: 1064734555}
+    - target: {fileID: 7221316664652350962, guid: 0666dc7bd8e6ae449bd1ea0c831aa8ee,
+        type: 3}
+      propertyPath: MovementSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221316664652350972, guid: 0666dc7bd8e6ae449bd1ea0c831aa8ee,
+        type: 3}
+      propertyPath: hpBar
+      value: 
+      objectReference: {fileID: 832170258}
+    - target: {fileID: 7221316664652350972, guid: 0666dc7bd8e6ae449bd1ea0c831aa8ee,
+        type: 3}
+      propertyPath: mpBar
+      value: 
+      objectReference: {fileID: 1979438730}
     - target: {fileID: 7563282028875708590, guid: 0666dc7bd8e6ae449bd1ea0c831aa8ee,
         type: 3}
       propertyPath: m_Name

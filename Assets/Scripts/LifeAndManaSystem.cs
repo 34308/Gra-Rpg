@@ -6,7 +6,9 @@ public class LifeAndManaSystem : MonoBehaviour
     public int hp=10;
     int maxMp = 10;
     public int mp = 10;
+    [SerializeField]
     public Slider hpBar;
+    [SerializeField]
     public Slider mpBar;
     // Start is called before the first frame update
     void Start()
