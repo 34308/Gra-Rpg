@@ -19,4 +19,8 @@ public class FollowingUser : MonoBehaviour
     {
         enemy.SetDestination(player.position);
     }
+    public void enemyDead()
+    {
+        enemy.isStopped = true;
+    }
 }

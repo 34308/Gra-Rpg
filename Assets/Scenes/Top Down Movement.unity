@@ -413,7 +413,8 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.8469e-39, y: 9.1835e-41, z: 1.8e-43, w: 0}
+  m_BoundingSphereOverride: {x: 1.12572005e+24, y: 9.0226046e-33, z: 1.3563156e-19,
+    w: 1.3563156e-19}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1271,6 +1272,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1458029317 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1261921169873096203, guid: 0666dc7bd8e6ae449bd1ea0c831aa8ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 7221316666541592267}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1458029320
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458029317}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01652906, y: 0.022772102, z: 0.04240072}
+  m_Center: {x: 0.001595143, y: -0.011706826, z: 0.020220732}
 --- !u!1 &1463571119
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,6 +1556,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643982574}
   m_CullTransparentMesh: 1
+--- !u!1 &1746076984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4586774818720818830, guid: 589b930ee8d896a48bbf773f11593d04,
+    type: 3}
+  m_PrefabInstance: {fileID: 3703672708558573749}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1746076992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746076984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e54cde71ce2deb44bdae863f6952826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1825033387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,6 +1968,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &919132147827783276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147827783269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0993d628c3bc14887f55fc78c073f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2286185317339288828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2345,6 +2395,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: slime
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586774818720818830, guid: 589b930ee8d896a48bbf773f11593d04,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 589b930ee8d896a48bbf773f11593d04, type: 3}

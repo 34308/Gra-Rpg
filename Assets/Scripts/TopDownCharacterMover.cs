@@ -14,7 +14,6 @@ public class TopDownCharacterMover : MonoBehaviour
     private InputAction movement;
     [SerializeField]
     private bool RotateTowardMouse;
-
     [SerializeField]
     private Transform MousePositon;
     [SerializeField]
@@ -28,21 +27,24 @@ public class TopDownCharacterMover : MonoBehaviour
     private Camera Camera;
     private void Start()
     {
-       
-        animator = GetComponent<Animator>();
+         animator = GetComponent<Animator>();
     }
     private void Awake()
     {
         _input = GetComponent<InputHandler>();
     }
-
+ 
     // Update is called once per frame
     void Update()
     {
         
         var targetVector = new Vector3(_input.InputVector.x, 0, _input.InputVector.y);
         var movementVector = MoveTowardTarget(targetVector);
-
+        if (_input.physicalAttack)
+        {
+            animator.SetBool("IsAttacking1", true);
+           
+        }
         if (!RotateTowardMouse)
         {
             RotateTowardMovementVector(movementVector);
@@ -75,13 +77,13 @@ public class TopDownCharacterMover : MonoBehaviour
             var target = MousePositon.position;
             target.y = 1000;
             transform.GetChild(2).LookAt(target);
-            Debug.Log("works");
+            
         }
     }
     private Vector3 MoveTowardTarget(Vector3 targetVector)
     {
         var speed = MovementSpeed * Time.deltaTime;
-        Debug.Log(_input.sprint);
+       
         if (_input.sprint)
         {
             speed = MovementSpeed * SprintModifier * Time.deltaTime;
