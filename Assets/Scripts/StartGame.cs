@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void GoToTopDownMovement()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Thread.Sleep(200);
+        SceneManager.LoadScene("Top Down Movement");
     }
 }

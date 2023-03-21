@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes: 
+  - enabled: 1
+    path: Assets/Scenes/Top Down Movement.unity
+    guid: 3af0e682045692848b6e90a5f10c375c
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 5b1bb0e3612b76142acc738ad123df46,
       type: 2}
