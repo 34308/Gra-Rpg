@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b83651c-fdc7-4926-9732-24a8dc94dd3d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/Slime_throw.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/Slime_throw.anim.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gra-Rpg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gra-Rpg/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Following.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Following.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HittingController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HittingController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Model/slime.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/slime.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PhysicalAttack.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PhysicalAttack.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/slime.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/slime.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Top Down Movement.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Top Down Movement.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FollowingUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FollowingUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/enemyHealthController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/enemyHealthController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,19 +26,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Following.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FollowingUser.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2MmYYZKzxUUl5vvVldQXBl9LNiR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Discover.Launch.Via.Unity": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -33,9 +50,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\broni\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\broni\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\broni\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\Kamil\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Kamil\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\Kamil\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -86,6 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678374272773</updated>
       <workItem from="1678374274940" duration="1728000" />
+      <workItem from="1679472337418" duration="3962000" />
     </task>
     <servers />
   </component>
@@ -95,6 +113,7 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>

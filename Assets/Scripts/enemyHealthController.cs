@@ -23,7 +23,7 @@ public class enemyHealthController : MonoBehaviour
         hp = hp - dmg;
         if (hp <= 0) {
             animator.SetBool("isAlive", false);
-            GetComponent<FollowingUser>().enemyDead();
+            GetComponent<FollowingUser>().EnemyDead();
            
         };
     }
