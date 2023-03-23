@@ -10,13 +10,10 @@ public class PathPrediction : MonoBehaviour
     public GameObject spike;
     Vector3 startPosition;
     Vector3 endPosition;
-    float initialForce=30;
     Quaternion rotation;
     int indexOfLineRenderer = 0;
     int numberOfPointInLine = 2;
     int lastPoint=1;
-    float timer = 0.1f;
-    bool stopped = false;
     float finalAngle;
 
     private bool _drawLine;

@@ -36,7 +36,14 @@ public class TopDownCharacterMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (_input.magicAttack)
+        {
+            GameObject.FindGameObjectWithTag("Pointer").GetComponent<MeshRenderer>().enabled = true;
+        }
+        else
+        {
+            GameObject.FindGameObjectWithTag("Pointer").GetComponent<MeshRenderer>().enabled =false;
+        }
         var targetVector = new Vector3(_input.InputVector.x, 0, _input.InputVector.y);
         var movementVector = MoveTowardTarget(targetVector);
         if (_input.physicalAttack)

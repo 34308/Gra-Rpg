@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Timeline;
 
 public class InputHandler : MonoBehaviour
 {
@@ -25,8 +26,10 @@ public class InputHandler : MonoBehaviour
         {
             magicAttack = true;
         }
-        else if (Input.GetMouseButtonUp(0))
+        else if (Input.GetMouseButtonUp(1))
         {
+            
+            GameObject.FindGameObjectWithTag("Player").GetComponent<HittingController>().MagicAttack();
             magicAttack = false;
         };
         if (Input.GetKeyDown(KeyCode.LeftShift))
