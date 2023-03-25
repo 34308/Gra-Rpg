@@ -3,22 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="11dfc1ed-2c97-4e83-b138-a670728b30a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gra-Rpg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gra-Rpg/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/NaturePackLite/Materials/Nature_Texture_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/NaturePackLite/Materials/Nature_Texture_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/NaturePackLite/Prefabs/Bush_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/NaturePackLite/Prefabs/Bush_02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/NaturePackLite/Prefabs/Rock_03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/NaturePackLite/Prefabs/Rock_03.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/NaturePackLite/Prefabs/Rock_04.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/NaturePackLite/Prefabs/Rock_04.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/NaturePackLite/Prefabs/Tree_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/NaturePackLite/Prefabs/Tree_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/NaturePackLite/Prefabs/Tree_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/NaturePackLite/Prefabs/Tree_02.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Hero.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Hero.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Main Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Main Camera.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/enemies/slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/enemies/slime.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Top Down Movement.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Top Down Movement.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HittingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HittingController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PathPrediction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PathPrediction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PointerHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PointerHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownCharacterMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TopDownCharacterMover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +103,9 @@
       <workItem from="1679431497975" duration="737000" />
       <workItem from="1679480650026" duration="1587000" />
       <workItem from="1679494128091" duration="670000" />
-      <workItem from="1679560350638" duration="2165000" />
+      <workItem from="1679560350638" duration="2598000" />
+      <workItem from="1679585191530" duration="390000" />
+      <workItem from="1679735419911" duration="3372000" />
     </task>
     <servers />
   </component>

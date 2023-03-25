@@ -6,7 +6,8 @@ using UnityEngine.InputSystem;
 public class TopDownCharacterMover : MonoBehaviour
 {
     private InputHandler _input;
-
+    public int dodgeRadius=7;
+    private ParticleSystem _particleSystem;
     [Space][SerializeField]
     private InputActionAsset PlayerActions;
     [SerializeField]
@@ -24,8 +25,12 @@ public class TopDownCharacterMover : MonoBehaviour
     Animator animator;
     [SerializeField]
     private Camera Camera;
+
+    private PointerHandler _pointerHandler;
     private void Start()
     {
+        _particleSystem = GetComponentInChildren<ParticleSystem>();
+        _pointerHandler = MousePositon.GetComponent<PointerHandler>();
          animator = GetComponent<Animator>();
     }
     private void Awake()
@@ -36,12 +41,35 @@ public class TopDownCharacterMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_input.magicAttack)
+        if (_input.magicAttack || _input.dogde)
         {
+           
+            if (Vector3.Distance(transform.position, MousePositon.position) < dodgeRadius && _input.dogde)
+            {
+                if (!_pointerHandler.IsGreen())
+                {
+                    _pointerHandler.TurnGreen();
+                }
+                _particleSystem.Play ();
+                ParticleSystem.EmissionModule em = _particleSystem.emission;
+                em.enabled = true;
+
+            }
+            else
+            {
+                if (!_pointerHandler.IsRed())
+                {
+                    _pointerHandler.TurnRed();
+                }
+            }
             GameObject.FindGameObjectWithTag("Pointer").GetComponent<MeshRenderer>().enabled = true;
         }
-        else
+        else if(!_input.magicAttack || !_input.dogde)
         {
+            if (!_pointerHandler.IsRed())
+            {
+                _pointerHandler.TurnRed();
+            }
             GameObject.FindGameObjectWithTag("Pointer").GetComponent<MeshRenderer>().enabled =false;
         }
         var targetVector = new Vector3(_input.InputVector.x, 0, _input.InputVector.y);
@@ -62,6 +90,16 @@ public class TopDownCharacterMover : MonoBehaviour
 
     }
 
+    public void Dodge()
+    {
+        LifeAndManaSystem lifeAndManaSystem = GetComponent<LifeAndManaSystem>();
+        if (lifeAndManaSystem.mp <= 2) return;
+        if (Vector3.Distance(transform.position, MousePositon.position) < dodgeRadius)
+        {
+            lifeAndManaSystem.takeMana(2);
+            transform.position = MousePositon.position;
+        }
+    }
    
     private void RotateFromMouseVector()
     {
