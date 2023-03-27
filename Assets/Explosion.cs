@@ -15,7 +15,7 @@ public class Explosion : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<enemyHealthController>().takeDemage(5);
+            other.GetComponent<EnemyHealthController>().TakeDamage(5);
             CallAfterDelay.Create(0.3f, () => {
                Destroy(this);
             });
