@@ -5,9 +5,13 @@ using UnityEngine;
 public class HittingController : MonoBehaviour
 {
     bool isHitting=false;
+    private LifeAndManaSystem LifeAndManaSystem;
+    public GameObject _explosion;
+
     // Start is called before the first frame update
     void Start()
     {
+        LifeAndManaSystem=GetComponent<LifeAndManaSystem>();
         
     }
 
@@ -40,5 +44,18 @@ public class HittingController : MonoBehaviour
 
         }
     }
-  
+
+    public void MagicAttack()
+    {
+        if (LifeAndManaSystem.mp > 3)
+        {
+            LifeAndManaSystem.takeMana(3);
+            Vector3 attackPosition =GameObject.FindGameObjectWithTag("Pointer").transform.position;
+            GameObject goExplosion=Instantiate(_explosion, attackPosition, Quaternion.identity);
+            CallAfterDelay.Create(0.5f, () =>
+            {
+                Destroy(goExplosion);
+            });
+        }
+    }
 }
