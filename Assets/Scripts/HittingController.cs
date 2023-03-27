@@ -38,7 +38,7 @@ public class HittingController : MonoBehaviour
             if (isHitting)
             {
                 Debug.Log("e2");
-                other.gameObject.GetComponent<enemyHealthController>().takeDemage(2);
+                other.gameObject.GetComponent<EnemyHealthController>().TakeDamage(2);
                 isHitting = false;
             }
 
