@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="11dfc1ed-2c97-4e83-b138-a670728b30a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gra-Rpg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gra-Rpg/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Explosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Explosion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/enemies/slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/enemies/slime.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Top Down Movement.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Top Down Movement.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HittingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HittingController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/enemyHealthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyHealthController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/enemyHealthController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +99,7 @@
       <workItem from="1679560350638" duration="2598000" />
       <workItem from="1679585191530" duration="390000" />
       <workItem from="1679735419911" duration="3372000" />
-      <workItem from="1679905337468" duration="2066000" />
+      <workItem from="1679905337468" duration="2712000" />
     </task>
     <servers />
   </component>
