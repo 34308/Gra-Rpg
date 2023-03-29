@@ -46,36 +46,20 @@ public class Golem : MonoBehaviour
        
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnHittingColiderActivated()
     {
-        
-        if (other.CompareTag("Player"))
-        {
-            var attack = Random.Range(1, 5);
-          
-            _animator.SetInteger("attack",attack);
-            
-        }
+        _isInMeleeRange=true;
+        var attack = Random.Range(1, 5);
+        _animator.SetInteger("attack",attack);
     }
 
     public void PlayManaEffect()
     {
         _particleSystemMana.Play();
     }
-    private void OnTriggerStay(Collider other)
+    public void OnHittingColiderDeactivated()
     {
-        
-        if (other.CompareTag("Player"))
-        {
-            _isInMeleeRange=true;
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            _isInMeleeRange=false;
-        }
+        _isInMeleeRange=false;
     }
     public void GolemPunchAttackDamage()
     {

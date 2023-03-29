@@ -7,16 +7,20 @@ using UnityEngine.UI;
 public class EnemyHealthController : MonoBehaviour
 {
     public float maxHealth = 10;
-    public GameObject healthBarUI;
-    public Slider slider;
+    private Canvas healthBarUI;
+    private Slider slider;
     private Animator _animator;
     private float _health;
     // Start is called before the first frame update
     void Start()
     {
+        slider = GetComponentInChildren<Slider>();
+        healthBarUI = Helper.FindComponentInChildWithTag<Canvas>(this.gameObject,"enemyHpBar");
+
         _animator = GetComponent<Animator>();
         _health = maxHealth;
         slider.value = CalculateHealth();
+       
     }
 
     // Update is called once per frame
@@ -37,7 +41,7 @@ public class EnemyHealthController : MonoBehaviour
             GetComponent<FollowingUser>().EnemyDead();
            return;
         }
-        healthBarUI.SetActive(true);
+        healthBarUI.gameObject.SetActive(true);
     }
 
     public void Heal(int hp)

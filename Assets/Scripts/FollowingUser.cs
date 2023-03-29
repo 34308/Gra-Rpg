@@ -9,10 +9,11 @@ public class FollowingUser : MonoBehaviour
     private bool _canShoot=true;
     Animator _animator;
     private float _howFar;
-    public Transform player;
+    private Transform player;
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         _animator = GetComponent<Animator>();
         
     }

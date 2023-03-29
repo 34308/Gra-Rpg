@@ -752,8 +752,8 @@ GameObject:
   - component: {fileID: 6283635849498889694}
   - component: {fileID: 6283635849498889695}
   m_Layer: 0
-  m_Name: Canvas
-  m_TagString: Untagged
+  m_Name: HpBar
+  m_TagString: enemyHpBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1032,7 +1032,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 6283635849709430027}
-  player: {fileID: 0}
 --- !u!114 &6283635849709430028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,8 +1158,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
-  healthBarUI: {fileID: 6283635849498889692}
-  slider: {fileID: 6283635848920362162}
 --- !u!114 &7229934606262480894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1173,7 +1170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ca7dc29cbd591449140f03566a931e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spike: {fileID: 7447959856152319518, guid: 66325eed72f458440979d85f12482244, type: 3}
+  throwable: {fileID: 7447959856152319518, guid: 66325eed72f458440979d85f12482244,
+    type: 3}
 --- !u!1 &6992970019324916821
 GameObject:
   m_ObjectHideFlags: 0

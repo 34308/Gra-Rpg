@@ -9,6 +9,7 @@ TagManager:
   - Pointer
   - GroundEffect
   - manaEnemyEffect
+  - enemyHpBar
   layers:
   - Default
   - TransparentFX

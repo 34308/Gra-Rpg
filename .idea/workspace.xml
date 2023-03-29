@@ -2,7 +2,85 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3643b714-47ad-4e8f-a2ab-7ba0b9206647" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Top Down Movement.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Top Down Movement.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AfterAttack.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AfterAttack.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Golem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Golem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Materials/Fence.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Materials/Fence.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/enemies.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/enemies/golem.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/enemies/golem/Crystal.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/enemies/golem/Crystal.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/enemies/golem/GolemBody.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/enemies/golem/GolemBody.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/enemies/golem/links.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/enemies/golem/links.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/MegaSlamArea.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/MegaSlamArea.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/STONE.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/STONE.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/Armature.002_attackBeam.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/Armature.002_attackBeam.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/Armature.002_headbutt.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/Armature.002_headbutt.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/Golem MegaSlam.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/Golem MegaSlam.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/Golem Punch.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/Golem Punch.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/Golem Slam.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/Golem Slam.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/Golem Spell.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/Golem Spell.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/Golem.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/Golem.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/Golem.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/Golem.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/GolemThrow.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/enemies/GolemThrow.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/plot.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Model/plot.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Fence.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Fence.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/STONE.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/STONE.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/enemies/Golem.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/enemies/Golem.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/items/Golem.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/items/Golem.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ProBuilder Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ProBuilder Data/Default Material Palette.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ProBuilder Data/Default Material Palette.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level1/NavMesh.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level1/NavMesh.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/lvl1NavMesh.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Helper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Helper.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ThrowableMovement.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SlamArea.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SlamArea.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StoneSnakeAttack.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StoneSnakeAttack.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gra-Rpg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gra-Rpg/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Model/enemies/stoneSnake 1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/enemies/stoneSnake 1.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Model/enemies/stoneSnake.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/enemies/stoneSnake.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/enemies/slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/enemies/slime.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/enemies/stoneSnake.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/enemies/stoneSnake.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyHealthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyHealthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FollowingUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FollowingUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HittingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HittingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PathPrediction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PathPrediction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpkieMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpkieMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ThrowableMovement.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StoneSnakeMoving.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StoneSnakeMoving.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +116,7 @@
       <updated>1678373476113</updated>
       <workItem from="1678373479981" duration="135000" />
       <workItem from="1678528398158" duration="18000" />
+      <workItem from="1680092062825" duration="106000" />
     </task>
     <servers />
   </component>
