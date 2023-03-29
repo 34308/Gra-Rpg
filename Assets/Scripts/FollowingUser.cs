@@ -21,7 +21,7 @@ public class FollowingUser : MonoBehaviour
     void Update()
     {
         _howFar = Vector3.Distance(player.transform.position,transform.position);
-        if(Random.Range(0, 1000) == 2 && _canShoot && _howFar>5)
+        if(Random.Range(0, 1000) == 2 && _canShoot && _howFar>5&&_howFar<20)
         {
             _canShoot = false;
             _animator.SetBool("isThrowing",true);

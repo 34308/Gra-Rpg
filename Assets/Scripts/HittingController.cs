@@ -12,23 +12,27 @@ public class HittingController : MonoBehaviour
     void Start()
     {
         LifeAndManaSystem=GetComponent<LifeAndManaSystem>();
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void physicalAttack()
     {
         isHitting = true;
+        CallAfterDelay.Create(0.5f, () =>
+        {
+            isHitting = false;
+        });
     }
     void OnCollisionEnter(Collision collision)
     {
         Collider myCollider = collision.GetContact(0).thisCollider;
         // Now do whatever you need with myCollider.
-        // (If multiple colliders were involved in the collision, 
+        // (If multiple colliders were involved in the collision,
         // you can find them all by iterating through the contacts)
     }
     private void OnTriggerStay(Collider other)
@@ -37,8 +41,8 @@ public class HittingController : MonoBehaviour
         {
             if (isHitting)
             {
-                Debug.Log("e2");
                 other.gameObject.GetComponent<EnemyHealthController>().TakeDamage(2);
+                GetComponent<LifeAndManaSystem>().restoreMana(1);
                 isHitting = false;
             }
 

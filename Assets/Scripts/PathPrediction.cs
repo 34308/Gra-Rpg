@@ -2,12 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PathPrediction : MonoBehaviour
 {
     LineRenderer line;
-    Rigidbody bullet;
-    public GameObject spike;
+    [FormerlySerializedAs("spike")] public GameObject throwable;
     Vector3 startPosition;
     Vector3 endPosition;
     Quaternion rotation;
@@ -15,6 +15,7 @@ public class PathPrediction : MonoBehaviour
     int numberOfPointInLine = 2;
     int lastPoint=1;
     float finalAngle;
+    private Transform _spawnPosition;
 
     private bool _drawLine;
 
@@ -28,6 +29,10 @@ public class PathPrediction : MonoBehaviour
         lastPoint = numberOfPointInLine - 1;
     }
 
+    public void SpawnPosition(Transform spawnTransformOfObject)
+    {
+        _spawnPosition = spawnTransformOfObject;
+    }
     private void Update()
     {
         startPosition = transform.position;
@@ -48,9 +53,15 @@ public class PathPrediction : MonoBehaviour
         endPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
         _drawLine = true;
 
-        CallAfterDelay.Create(0.5f, () => {
-            GameObject goSpike=Instantiate(spike, transform.position, Quaternion.identity);
-            goSpike.GetComponent<SpkieMovement>().SetOwnerName(transform.name);
+        CallAfterDelay.Create(0.1f, () => {
+            if (_spawnPosition==null)
+            {
+                _spawnPosition = transform;
+            }
+            GameObject goSpike=Instantiate(throwable, _spawnPosition.position, Quaternion.identity);
+            
+            goSpike.GetComponent<ThrowableMovement>().SetOwnerName(transform.name);
+            goSpike.GetComponent<ThrowableMovement>().StartThrow();
             cleanLine();
         });
         
