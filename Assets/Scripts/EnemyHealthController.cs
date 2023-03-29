@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -16,11 +17,9 @@ public class EnemyHealthController : MonoBehaviour
     {
         slider = GetComponentInChildren<Slider>();
         healthBarUI = Helper.FindComponentInChildWithTag<Canvas>(this.gameObject,"enemyHpBar");
-
         _animator = GetComponent<Animator>();
         _health = maxHealth;
         slider.value = CalculateHealth();
-       
     }
 
     // Update is called once per frame
@@ -38,8 +37,16 @@ public class EnemyHealthController : MonoBehaviour
         _health -= dmg;
         if (_health <= 0) {
             _animator.SetBool("isAlive", false);
-            GetComponent<FollowingUser>().EnemyDead();
-           return;
+            if(name.Contains("slime"))
+            {
+                GetComponent<FollowingUser>().EnemyDead();
+            }else if(name.Contains("Golem"))
+            {
+                GetComponent<Golem>().EnemyDead();
+            }else if(name.Contains("stone")) {
+                GetComponent<StoneSnakeMoving>().EnemyDead();
+            }
+            return;
         }
         healthBarUI.gameObject.SetActive(true);
     }

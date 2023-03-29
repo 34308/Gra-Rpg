@@ -15,7 +15,7 @@ public class FollowingUser : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         _animator = GetComponent<Animator>();
-        
+       
     }
 
     // Update is called once per frame
@@ -35,7 +35,12 @@ public class FollowingUser : MonoBehaviour
     }
     public void EnemyDead()
     {
+        
         enemy.isStopped = true;
+        CallAfterDelay.Create(3.5f, () =>
+        {
+            Destroy(this.gameObject);
+        });
     }
 
     //wywolywane w animcji
