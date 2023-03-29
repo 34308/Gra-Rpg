@@ -23,6 +23,10 @@ public class HittingController : MonoBehaviour
     public void physicalAttack()
     {
         isHitting = true;
+        CallAfterDelay.Create(0.5f, () =>
+        {
+            isHitting = false;
+        });
     }
     void OnCollisionEnter(Collision collision)
     {
@@ -37,7 +41,7 @@ public class HittingController : MonoBehaviour
         {
             if (isHitting)
             {
-                Debug.Log("e2");
+                GetComponent<LifeAndManaSystem>().restoreMana(1);
                 other.gameObject.GetComponent<enemyHealthController>().takeDemage(2);
                 isHitting = false;
             }

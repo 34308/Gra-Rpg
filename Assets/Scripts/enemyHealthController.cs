@@ -1,14 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class enemyHealthController : MonoBehaviour
 {
     Animator animator;
-    float hp=10;
+    public float hp=10;
     // Start is called before the first frame update
     void Start()
     {
+        if (name.Contains("slime"))
+        {
+            hp = 10;
+        }else if (name.Contains("stone"))
+        {
+            hp = 50;
+
+        }
         animator = GetComponent<Animator>();
     }
 
@@ -23,7 +32,15 @@ public class enemyHealthController : MonoBehaviour
         hp = hp - dmg;
         if (hp <= 0) {
             animator.SetBool("isAlive", false);
-            GetComponent<FollowingUser>().EnemyDead();
+            if (name.Contains("slime"))
+            {
+                GetComponent<FollowingUser>().EnemyDead();
+            }else if (name.Contains("stone"))
+            {
+                GetComponent<StoneSnakeMoving>().EnemyDead();
+
+            }
+            
            
         };
     }

@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 3703672709202317232}
   - component: {fileID: 1746076993}
   - component: {fileID: 1746076992}
-  - component: {fileID: 1746076994}
+  - component: {fileID: 791091990}
   m_Layer: 0
   m_Name: slime
   m_TagString: Enemy
@@ -496,7 +496,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e54cde71ce2deb44bdae863f6952826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1746076994
+  hp: 10
+--- !u!114 &791091990
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -508,7 +509,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ca7dc29cbd591449140f03566a931e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spike: {fileID: 7447959856152319518, guid: 66325eed72f458440979d85f12482244, type: 3}
+  throwable: {fileID: 7447959856152319518, guid: 66325eed72f458440979d85f12482244,
+    type: 3}
 --- !u!1 &4808415625401336905
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,7 +687,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5963804711116302048}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: -0, z: -87.6}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 7509761558192394182}
