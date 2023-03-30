@@ -13,6 +13,7 @@ public class Golem : MonoBehaviour
     private bool _canThrow=true;
     Animator _animator;
     private float _howFar;
+    private bool _canAttack=true;
     private Transform player;
     private bool isInSlamArea=false;
     private bool isInMegaSlamArea=false;
@@ -21,6 +22,9 @@ public class Golem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Helper.FindComponentInChildWithTag<MeshRenderer>(this.gameObject, "SlamArea").forceRenderingOff=true;
+        Helper.FindComponentInChildWithTag<MeshRenderer>(this.gameObject, "MegaSlamArea").forceRenderingOff=true;
+
         _particleSystemMana= Helper.FindComponentInChildWithTag<ParticleSystem>(this.gameObject,"manaEnemyEffect");
 
         _particleSystemGround = Helper.FindComponentInChildWithTag<ParticleSystem>(this.gameObject,"GroundEffect");
@@ -32,12 +36,16 @@ public class Golem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        var random = Random.Range(0, 1000);
         _howFar = Vector3.Distance(player.transform.position,transform.position);
-        if(Random.Range(0, 1000) == 2 && _canThrow && _howFar>8 &&_howFar<20)
+        if(random == 2 && _canThrow && _howFar>8 &&_howFar<20)
         {
             _canThrow = false;
             _animator.SetInteger("attack",5);
+        }else if (random == 5 && _canThrow && _howFar>8 &&_howFar<20)
+        {
+            _canThrow = false;
+            _animator.SetInteger("attack",2);
         }
         else
         {
@@ -50,8 +58,41 @@ public class Golem : MonoBehaviour
     public void OnHittingColiderActivated()
     {
         _isInMeleeRange=true;
-        var attack = Random.Range(1, 5);
-        _animator.SetInteger("attack",attack);
+        if (_canAttack)
+        {
+            _canAttack = false;
+            var attack = Random.Range(1, 5);
+            if (attack == 2)
+            {
+                attack = attack+1;
+            }
+            
+            if (attack != 2){
+                if (attack == 4)
+                {
+                    Helper.FindComponentInChildWithTag<MeshRenderer>(this.gameObject, "SlamArea").forceRenderingOff=false;
+                    CallAfterDelay.Create(2f, () =>
+                    {
+                        Helper.FindComponentInChildWithTag<MeshRenderer>(this.gameObject, "SlamArea").forceRenderingOff=true;
+
+                    });
+                }else if (attack == 1)
+                {
+                    Helper.FindComponentInChildWithTag<MeshRenderer>(this.gameObject, "MegaSlamArea").forceRenderingOff=false;
+                    CallAfterDelay.Create(2f, () =>
+                    {
+                        Helper.FindComponentInChildWithTag<MeshRenderer>(this.gameObject, "MegaSlamArea").forceRenderingOff=true;
+
+                    });
+                }
+                _animator.SetInteger("attack",attack);
+                CallAfterDelay.Create(3f, () =>
+                {
+                    _canAttack = true;
+                });
+            }
+        }
+        
     }
 
     public void PlayManaEffect()
@@ -81,7 +122,7 @@ public class Golem : MonoBehaviour
     public void EnemyDead()
     {
         _enemy.isStopped = true;
-        CallAfterDelay.Create(3.5f, () =>
+        CallAfterDelay.Create(5f, () =>
         {
             Destroy(this.gameObject);
         });

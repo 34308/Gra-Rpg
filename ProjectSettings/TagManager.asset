@@ -10,6 +10,8 @@ TagManager:
   - GroundEffect
   - manaEnemyEffect
   - enemyHpBar
+  - SlamArea
+  - MegaSlamArea
   layers:
   - Default
   - TransparentFX
