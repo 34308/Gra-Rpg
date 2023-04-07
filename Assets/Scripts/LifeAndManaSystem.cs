@@ -24,6 +24,10 @@ public class LifeAndManaSystem : MonoBehaviour
     public void takeDemage(int demage)
     {
         hp = hp - demage;
+        if (hp <= 0)
+        {
+            Die();
+        }
         hpBar.value = (hp * 100.0f / maxHp) / 100.0f;
     }
     public void healPlayer(int heal)
@@ -50,5 +54,11 @@ public class LifeAndManaSystem : MonoBehaviour
             mp = maxMp;
         }
         mpBar.value = (mp * 100 / maxMp)/100.0f;
+    }
+
+    private void Die()
+    {
+        GetComponent<TopDownCharacterMover>().Dead();
+        GetComponent<Animator>().SetBool("isAlive",false);
     }
 }

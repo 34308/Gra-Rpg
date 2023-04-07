@@ -26,6 +26,7 @@ public class TopDownCharacterMover : MonoBehaviour
     [SerializeField]
     private Camera Camera;
 
+    private bool alive=true;
     private PointerHandler _pointerHandler;
     private void Start()
     {
@@ -37,56 +38,68 @@ public class TopDownCharacterMover : MonoBehaviour
     {
         _input = GetComponent<InputHandler>();
     }
- 
+
+    public void Dead()
+    {
+        alive = false;
+    }
     // Update is called once per frame
     void Update()
     {
-        if (_input.magicAttack || _input.dogde)
+        if (!alive)
         {
-           
-            if (Vector3.Distance(transform.position, MousePositon.position) < dodgeRadius && _input.dogde)
+            return;
+        }
+        else
+        {
+            if (_input.magicAttack || _input.dogde)
             {
-                if (!_pointerHandler.IsGreen())
+           
+                if (Vector3.Distance(transform.position, MousePositon.position) < dodgeRadius && _input.dogde)
                 {
-                    _pointerHandler.TurnGreen();
-                }
-                _particleSystem.Play ();
-                ParticleSystem.EmissionModule em = _particleSystem.emission;
-                em.enabled = true;
+                    if (!_pointerHandler.IsGreen())
+                    {
+                        _pointerHandler.TurnGreen();
+                    }
+                    _particleSystem.Play ();
+                    ParticleSystem.EmissionModule em = _particleSystem.emission;
+                    em.enabled = true;
 
+                }
+                else
+                {
+                    if (!_pointerHandler.IsRed())
+                    {
+                        _pointerHandler.TurnRed();
+                    }
+                }
+                GameObject.FindGameObjectWithTag("Pointer").GetComponent<MeshRenderer>().enabled = true;
             }
-            else
+            else if(!_input.magicAttack || !_input.dogde)
             {
                 if (!_pointerHandler.IsRed())
                 {
                     _pointerHandler.TurnRed();
                 }
+                GameObject.FindGameObjectWithTag("Pointer").GetComponent<MeshRenderer>().enabled =false;
             }
-            GameObject.FindGameObjectWithTag("Pointer").GetComponent<MeshRenderer>().enabled = true;
-        }
-        else if(!_input.magicAttack || !_input.dogde)
-        {
-            if (!_pointerHandler.IsRed())
+            var targetVector = new Vector3(_input.InputVector.x, 0, _input.InputVector.y);
+            var movementVector = MoveTowardTarget(targetVector);
+            if (_input.physicalAttack)
             {
-                _pointerHandler.TurnRed();
-            }
-            GameObject.FindGameObjectWithTag("Pointer").GetComponent<MeshRenderer>().enabled =false;
-        }
-        var targetVector = new Vector3(_input.InputVector.x, 0, _input.InputVector.y);
-        var movementVector = MoveTowardTarget(targetVector);
-        if (_input.physicalAttack)
-        {
-            animator.SetBool("IsAttacking1", true);
+                animator.SetBool("IsAttacking1", true);
            
+            }
+            if (!RotateTowardMouse)
+            {
+                RotateTowardMovementVector(movementVector);
+            }
+            if (RotateTowardMouse)
+            {
+                RotateFromMouseVector();
+            }
         }
-        if (!RotateTowardMouse)
-        {
-            RotateTowardMovementVector(movementVector);
-        }
-        if (RotateTowardMouse)
-        {
-            RotateFromMouseVector();
-        }
+       
 
     }
 
@@ -105,14 +118,17 @@ public class TopDownCharacterMover : MonoBehaviour
     {
         var target = MousePositon.position;
         target.y = transform.GetChild(2).transform.position.y;
-        
+      
         transform.GetChild(2).transform.LookAt(target);
         
     }
     [ExecuteInEditMode]
     void OnAnimatorMove()
     {
-        
+        if (!alive)
+        {
+            return;
+        }
         if (animator)
         {
 

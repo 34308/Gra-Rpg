@@ -107,7 +107,11 @@ public class Golem : MonoBehaviour
     {
         if (_isInMeleeRange)
         {
-            player.GetComponent<LifeAndManaSystem>().takeDemage(2);
+            if (Vector3.Distance(player.position, this.transform.position) < 3)
+            {
+                player.GetComponent<LifeAndManaSystem>().takeDemage(2);
+            }
+         
         }
     }
     public void IsInSlamArea(bool inArea)
