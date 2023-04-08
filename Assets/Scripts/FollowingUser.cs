@@ -39,7 +39,10 @@ public class FollowingUser : MonoBehaviour
         enemy.isStopped = true;
         CallAfterDelay.Create(3.5f, () =>
         {
-            Destroy(this.gameObject);
+            if (this != null)
+            {
+                Destroy(this.gameObject);
+            }
         });
     }
 
