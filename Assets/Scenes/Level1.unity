@@ -1044,6 +1044,11 @@ PrefabInstance:
       propertyPath: mpBar
       value: 
       objectReference: {fileID: 1831640303}
+    - target: {fileID: 7459155215326829968, guid: 0666dc7bd8e6ae449bd1ea0c831aa8ee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7563282028875708590, guid: 0666dc7bd8e6ae449bd1ea0c831aa8ee,
         type: 3}
       propertyPath: m_Name
