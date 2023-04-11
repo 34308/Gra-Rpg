@@ -2668,6 +2668,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 189781466533427404, guid: ac516d6f17f1c3541a54536d5fe6d7cc,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2368795849784479432, guid: ac516d6f17f1c3541a54536d5fe6d7cc,
         type: 3}
       propertyPath: m_Sprite
@@ -2702,6 +2707,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907226978359659314, guid: ac516d6f17f1c3541a54536d5fe6d7cc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5526608428578642687, guid: ac516d6f17f1c3541a54536d5fe6d7cc,
         type: 3}
@@ -2949,6 +2959,16 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5975324565342136334, guid: ac516d6f17f1c3541a54536d5fe6d7cc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082385763720729901, guid: ac516d6f17f1c3541a54536d5fe6d7cc,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6663732243678084564, guid: ac516d6f17f1c3541a54536d5fe6d7cc,
         type: 3}
       propertyPath: m_Color.a
@@ -2973,6 +2993,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EquipmentIcon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259369410477347422, guid: ac516d6f17f1c3541a54536d5fe6d7cc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489667374985542747, guid: ac516d6f17f1c3541a54536d5fe6d7cc,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656410670536557350, guid: ac516d6f17f1c3541a54536d5fe6d7cc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7819058186051144718, guid: ac516d6f17f1c3541a54536d5fe6d7cc,
         type: 3}
