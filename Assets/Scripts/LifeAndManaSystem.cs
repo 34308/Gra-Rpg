@@ -2,15 +2,17 @@ using UnityEngine;
 using UnityEngine.UI;
 public class LifeAndManaSystem : MonoBehaviour
 {
-    int maxHp = 10;
+    private const int MaxHp = 10;
     public int hp=10;
-    int maxMp = 10;
+    private const int MaxMp = 10;
     public int mp = 10;
     [SerializeField]
     public Slider hpBar;
     [SerializeField]
     public Slider mpBar;
     // Start is called before the first frame update
+    public bool HpIsFull => MaxHp == hp;
+    public bool MpIsFull => MaxMp == mp;
     void Start()
     {
         
@@ -28,32 +30,32 @@ public class LifeAndManaSystem : MonoBehaviour
         {
             Die();
         }
-        hpBar.value = (hp * 100.0f / maxHp) / 100.0f;
+        hpBar.value = (hp * 100.0f / MaxHp) / 100.0f;
     }
     public void HealPlayer(int heal)
     {
         
         hp = hp + heal;
-        if (hp > maxHp)
+        if (hp > MaxHp)
         {
-            hp = maxHp;
+            hp = MaxHp;
         }
-        hpBar.value = (hp * 100 / maxHp)/100.0f;
+        hpBar.value = (hp * 100 / MaxHp)/100.0f;
     }
     public void takeMana(int cost)
     {
         mp = mp - cost;
-        mpBar.value = (mp * 100 / maxMp)/ 100.0f;
+        mpBar.value = (mp * 100 / MaxMp)/ 100.0f;
     }
     public void RestoreMana(int restore)
     {
 
         mp = mp + restore;
-        if (mp > maxMp)
+        if (mp > MaxMp)
         {
-            mp = maxMp;
+            mp = MaxMp;
         }
-        mpBar.value = (mp * 100 / maxMp)/100.0f;
+        mpBar.value = (mp * 100 / MaxMp)/100.0f;
     }
 
     private void Die()

@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="11dfc1ed-2c97-4e83-b138-a670728b30a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gra-Rpg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gra-Rpg/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Hero.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Hero.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Equipment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Equipment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HittingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HittingController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LifeAndManaSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LifeAndManaSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +117,7 @@
       <workItem from="1680872561038" duration="4402000" />
       <workItem from="1681225980706" duration="969000" />
       <workItem from="1681317975672" duration="7455000" />
-      <workItem from="1681415411653" duration="2963000" />
+      <workItem from="1681415411653" duration="3749000" />
     </task>
     <servers />
   </component>
@@ -144,24 +139,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Equipment.cs</url>
-          <line>46</line>
-          <properties documentPath="C:\Uczelnia\III_Semsestr\WRII\Gra-Rpg\Assets\Scripts\Equipment.cs" initialLine="46" containingFunctionPresentation="method 'HandleUseItem'">
-            <startOffsets>
-              <option value="1613" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1664" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

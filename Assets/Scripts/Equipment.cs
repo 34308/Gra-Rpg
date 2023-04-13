@@ -45,11 +45,16 @@ public class Equipment : MonoBehaviour
         if (!Input.GetButtonDown(buttonName)) return;
         var selectedItem = _itemSlots?.ElementAtOrDefault(elementIndex);
         if (!selectedItem || selectedItem.enabled == false) return;
-        if (selectedItem.sprite.Equals(manaMixtureSprite))
+        if (selectedItem.sprite.Equals(manaMixtureSprite) && !_lifeAndManaSystem.MpIsFull)
+        {
             _lifeAndManaSystem.RestoreMana(manaPointsFromMixture);
-        if (selectedItem.sprite.Equals(healthMixtureSprite)) 
+            selectedItem.enabled = false;
+        }
+        if (selectedItem.sprite.Equals(healthMixtureSprite) && !_lifeAndManaSystem.HpIsFull)
+        {
             _lifeAndManaSystem.HealPlayer(healthPointsFromMixture);
-        selectedItem.enabled = false;
+            selectedItem.enabled = false;
+        }
     }
 
     public void PickupItem(ItemType type)
