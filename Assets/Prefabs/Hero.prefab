@@ -12900,6 +12900,7 @@ GameObject:
   - component: {fileID: 919132147827783271}
   - component: {fileID: 919132147827783270}
   - component: {fileID: 919132147827783276}
+  - component: {fileID: 9222354657162368763}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Player
@@ -13049,6 +13050,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _explosion: {fileID: 3899820999823368477, guid: 7f72c5ebb44b61c41945d880eccc348a,
     type: 3}
+--- !u!114 &9222354657162368763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563282028875708590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c26f5de408531245b1d764da3bedfeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manaMixtureSprite: {fileID: 21300000, guid: 6592b916f86b19e428db6f6847c7b6dd, type: 3}
+  healthMixtureSprite: {fileID: 21300000, guid: e52ea25af699fd445b7046374f81a5b9,
+    type: 3}
+  inventory: {fileID: 0}
 --- !u!1 &7574839571073304216
 GameObject:
   m_ObjectHideFlags: 0

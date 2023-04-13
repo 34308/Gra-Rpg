@@ -43,7 +43,7 @@ public class HittingController : MonoBehaviour
             {
                 Debug.Log(other.gameObject.name);
                 other.gameObject.GetComponent<EnemyHealthController>().TakeDamage(2);
-                GetComponent<LifeAndManaSystem>().restoreMana(1);
+                GetComponent<LifeAndManaSystem>().RestoreMana(1);
                 isHitting = false;
             }
 

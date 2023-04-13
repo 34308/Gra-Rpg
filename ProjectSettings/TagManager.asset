@@ -12,6 +12,8 @@ TagManager:
   - enemyHpBar
   - SlamArea
   - MegaSlamArea
+  - PickupItem
+  - ItemSlot
   layers:
   - Default
   - TransparentFX

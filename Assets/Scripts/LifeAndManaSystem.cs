@@ -30,7 +30,7 @@ public class LifeAndManaSystem : MonoBehaviour
         }
         hpBar.value = (hp * 100.0f / maxHp) / 100.0f;
     }
-    public void healPlayer(int heal)
+    public void HealPlayer(int heal)
     {
         
         hp = hp + heal;
@@ -45,7 +45,7 @@ public class LifeAndManaSystem : MonoBehaviour
         mp = mp - cost;
         mpBar.value = (mp * 100 / maxMp)/ 100.0f;
     }
-    public void restoreMana(int restore)
+    public void RestoreMana(int restore)
     {
 
         mp = mp + restore;
