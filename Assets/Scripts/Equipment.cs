@@ -24,7 +24,7 @@ public class Equipment : MonoBehaviour
     void Start()
     {
         _itemSlots = inventory.GetComponentsInChildren<Image>().Where(x => x.CompareTag("ItemSlot"));
-        _lifeAndManaSystem = gameObject.GetComponent<LifeAndManaSystem>();
+        _lifeAndManaSystem = GameObject.FindWithTag("Player").GetComponent<LifeAndManaSystem>();
         if(_lifeAndManaSystem == null) Debug.LogError("Cant find component LifeAndManaSystem");
         foreach (var itemImage in _itemSlots)
         {

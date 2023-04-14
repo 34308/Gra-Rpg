@@ -17291,7 +17291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manaMixtureSprite: {fileID: 0}
   healthMixtureSprite: {fileID: 0}
-  inventory: {fileID: 0}
+  inventory: {fileID: 1934170164}
   manaPointsFromMixture: 10
   healthPointsFromMixture: 10
 --- !u!1001 &1938473577
