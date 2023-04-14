@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 7489667374985542747}
   m_Layer: 0
   m_Name: EquipmentIcon
-  m_TagString: Untagged
+  m_TagString: ItemSlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -561,7 +561,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6592b916f86b19e428db6f6847c7b6dd, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1078,6 +1078,7 @@ GameObject:
   - component: {fileID: 2808879838888049739}
   - component: {fileID: 6218639230287367006}
   - component: {fileID: 6645074433131133909}
+  - component: {fileID: 1934170165}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -1146,6 +1147,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1934170165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3320770160969554957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c26f5de408531245b1d764da3bedfeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manaMixtureSprite: {fileID: 0}
+  healthMixtureSprite: {fileID: 0}
+  inventory: {fileID: 3320770160969554957}
+  manaPointsFromMixture: 10
+  healthPointsFromMixture: 10
 --- !u!1 &3874351502123997131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,7 +1177,7 @@ GameObject:
   - component: {fileID: 2368795849784479432}
   m_Layer: 0
   m_Name: EquipmentIcon
-  m_TagString: Untagged
+  m_TagString: ItemSlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1211,7 +1229,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6592b916f86b19e428db6f6847c7b6dd, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1234,7 +1252,7 @@ GameObject:
   - component: {fileID: 6082385763720729901}
   m_Layer: 0
   m_Name: EquipmentIcon
-  m_TagString: Untagged
+  m_TagString: ItemSlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1286,7 +1304,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6592b916f86b19e428db6f6847c7b6dd, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2337,7 +2355,7 @@ GameObject:
   - component: {fileID: 189781466533427404}
   m_Layer: 0
   m_Name: EquipmentIcon
-  m_TagString: Untagged
+  m_TagString: ItemSlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2389,7 +2407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6592b916f86b19e428db6f6847c7b6dd, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
