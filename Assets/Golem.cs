@@ -125,6 +125,7 @@ public class Golem : MonoBehaviour
 
     public void EnemyDead()
     {
+        player.GetComponent<LifeAndManaSystem>().Won();
         _enemy.isStopped = true;
         CallAfterDelay.Create(5f, () =>
         {

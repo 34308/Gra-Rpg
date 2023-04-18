@@ -10,6 +10,9 @@ public class LifeAndManaSystem : MonoBehaviour
     public Slider hpBar;
     [SerializeField]
     public Slider mpBar;
+    public GameObject EndingScreen;
+    public GameObject deathMessage;
+    public GameObject WinningMessage;
     // Start is called before the first frame update
     public bool HpIsFull => MaxHp == hp;
     public bool MpIsFull => MaxMp == mp;
@@ -60,7 +63,15 @@ public class LifeAndManaSystem : MonoBehaviour
 
     private void Die()
     {
+        deathMessage.SetActive(true);
+        EndingScreen.SetActive(true);
         GetComponent<TopDownCharacterMover>().Dead();
         GetComponent<Animator>().SetBool("isAlive",false);
+        
+    }
+    public void Won()
+    {
+        WinningMessage.SetActive(true);
+        EndingScreen.SetActive(true);
     }
 }
