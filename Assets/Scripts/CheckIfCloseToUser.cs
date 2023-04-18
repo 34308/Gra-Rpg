@@ -23,6 +23,13 @@ public class CheckIfCloseToUser : MonoBehaviour
         
     }
 
+    public void DoDamage()
+    {
+        if (_animator.GetBool(IsCloseToPlayer))
+        {
+            _player.GetComponent<LifeAndManaSystem>().takeDemage(2);
+        } 
+    }
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == _player)
@@ -36,6 +43,7 @@ public class CheckIfCloseToUser : MonoBehaviour
         if (other.gameObject == _player)
         {
             _animator.SetBool(IsCloseToPlayer, false);
+            
         }
     }
 }

@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="11dfc1ed-2c97-4e83-b138-a670728b30a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gra-Rpg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gra-Rpg/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Golem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Golem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LifeAndManaSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LifeAndManaSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/LiberationSans SDF - Metalic Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/LiberationSans SDF - Metalic Green.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CheckIfCloseToUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CheckIfCloseToUser.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +127,7 @@
       <workItem from="1681415411653" duration="4340000" />
       <workItem from="1681455851325" duration="492000" />
       <workItem from="1681802639427" duration="3236000" />
-      <workItem from="1681805933273" duration="653000" />
+      <workItem from="1681805933273" duration="1386000" />
     </task>
     <servers />
   </component>
