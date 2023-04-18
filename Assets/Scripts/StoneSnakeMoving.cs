@@ -15,12 +15,15 @@ public class StoneSnakeMoving : MonoBehaviour
     private BoxCollider _attackCollider;
     Animator animator;
     private Transform _head;
+    CapsuleCollider partcicleColider;
     
     // Start is called before the first frame update
     void Start()
     {
         
         _particleSystem = GetComponentInChildren<ParticleSystem>();
+        
+        partcicleColider= _particleSystem.GetComponent<CapsuleCollider>();
         _head = transform.GetChild(0).GetChild(7).GetChild(0).GetChild(1).GetChild(0).GetChild(0);
         _attackCollider = GetComponent<BoxCollider>();
         animator = GetComponent<Animator>();
@@ -32,11 +35,31 @@ public class StoneSnakeMoving : MonoBehaviour
     public void AtackBeamRay()
     {
         _particleSystem.Play();
+        partcicleColider.radius = (float)4.738994;
+        partcicleColider.height = (float)27.37351;
     }
+
+
+    public void HeadButt()
+    {
+        if (GetComponentInChildren<StoneSnakeHeadColider>()._isIn)
+        {
+            player.GetComponent<LifeAndManaSystem>().takeDemage(4);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.CompareTag("Player"))
         {
+            Debug.Log("is in");
+            BoxCollider boxCollider = GetComponent<BoxCollider>();
+           
+            if (_particleSystem.isPlaying && GetComponentInChildren<particleCollider>()._isIn)
+            {
+                player.GetComponent<LifeAndManaSystem>().takeDemage(2);
+            }
             animator.SetInteger("attack",Random.Range(1, 3));
         }
     }
@@ -44,7 +67,8 @@ public class StoneSnakeMoving : MonoBehaviour
     public void AfterAttack()
     {
         _particleSystem.Stop();
-
+        partcicleColider.radius = (float)0;
+        partcicleColider.height = (float)0;
         animator.SetInteger("attack",0);
         animator.SetBool("IsMoving", true);
         animator.SetBool("IsRunning", true);

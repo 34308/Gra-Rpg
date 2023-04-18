@@ -16,6 +16,7 @@ TagManager:
   - ItemSlot
   - PauseMenu
   - DeathScreen
+  - particleColider
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 200236561}
   - component: {fileID: 200236563}
   - component: {fileID: 200236562}
+  - component: {fileID: 378123447}
+  - component: {fileID: 378123451}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -3668,7 +3670,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 4
     type: 0
     collisionMode: 0
@@ -3849,11 +3851,11 @@ ParticleSystem:
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 2
     inside: 2
     outside: 0
-    enter: 0
+    enter: 2
     exit: 0
     colliderQueryMode: 0
     radiusScale: 1
@@ -4863,6 +4865,33 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!136 &378123447
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200236560}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 4.7389936
+  m_Height: 27.373512
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 13.75}
+--- !u!114 &378123451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200236560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a5e3d0fb01786a47a28759b4ce342aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isIn: 0
 --- !u!1 &238901598704837089
 GameObject:
   m_ObjectHideFlags: 0
@@ -5585,6 +5614,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2723055446200162301}
+  - component: {fileID: 735635877}
+  - component: {fileID: 735635878}
   m_Layer: 0
   m_Name: Bone.012_end
   m_TagString: Untagged
@@ -5606,6 +5637,32 @@ Transform:
   m_Father: {fileID: 6974979057387218020}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &735635877
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5491503465457359376}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0472225, y: 0.051129483, z: 0.053010672}
+  m_Center: {x: 0.0031230375, y: 0.01050126, z: -5.8510063e-10}
+--- !u!114 &735635878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5491503465457359376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecf1cba5b7fcfc24daf0374fcf14dbcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isIn: 0
 --- !u!1 &5640042216608591921
 GameObject:
   m_ObjectHideFlags: 0
