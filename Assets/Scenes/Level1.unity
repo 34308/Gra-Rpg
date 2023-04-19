@@ -106,15 +106,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.77
-    agentHeight: 2.02
-    agentSlope: 20.9
-    agentClimb: 1.24
-    ledgeDropHeight: 0
+    agentRadius: 0.5
+    agentHeight: 1
+    agentSlope: 30.3
+    agentClimb: 0.7
+    ledgeDropHeight: 1
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.25666666
+    cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: b19d5ca257cf3cd44852bddab01cd966, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!1001 &3002890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 32129534}
   - component: {fileID: 32129533}
   - component: {fileID: 32129532}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemySpawnPos3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -893,7 +893,7 @@ GameObject:
   - component: {fileID: 67124604}
   - component: {fileID: 67124606}
   - component: {fileID: 67124605}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemySpawnPos1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1034,6 +1034,11 @@ PrefabInstance:
       propertyPath: Camera
       value: 
       objectReference: {fileID: 228176351}
+    - target: {fileID: 7221316664652350962, guid: 0666dc7bd8e6ae449bd1ea0c831aa8ee,
+        type: 3}
+      propertyPath: dodgeRadius
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7221316664652350963, guid: 0666dc7bd8e6ae449bd1ea0c831aa8ee,
         type: 3}
       propertyPath: PauseMenu
@@ -1591,7 +1596,7 @@ GameObject:
   - component: {fileID: 159213685}
   - component: {fileID: 159213687}
   - component: {fileID: 159213686}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemySpawnPos3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5327,7 +5332,7 @@ GameObject:
   - component: {fileID: 518337369}
   - component: {fileID: 518337371}
   - component: {fileID: 518337370}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemySpawnPos2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8413,7 +8418,7 @@ GameObject:
   - component: {fileID: 882803025}
   - component: {fileID: 882803027}
   - component: {fileID: 882803026}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemySpawnPos3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8578,7 +8583,7 @@ GameObject:
   - component: {fileID: 889945514}
   - component: {fileID: 889945516}
   - component: {fileID: 889945515}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemySpawnPos2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9236,6 +9241,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05c0e687dbe69a747857563b9af59bd4, type: 3}
+--- !u!1 &988558543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 988558544}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &988558544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988558543}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &998450313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9751,7 +9786,7 @@ GameObject:
   - component: {fileID: 1050672055}
   - component: {fileID: 1050672054}
   - component: {fileID: 1050672053}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: StageArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9801,7 +9836,7 @@ Transform:
   - {fileID: 2026517850}
   - {fileID: 32129534}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1051919380
 PrefabInstance:
@@ -10938,6 +10973,8 @@ GameObject:
   - component: {fileID: 1156059229}
   - component: {fileID: 1156059228}
   - component: {fileID: 1156059227}
+  - component: {fileID: 1156059231}
+  - component: {fileID: 1156059230}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -11003,6 +11040,64 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1156059230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156059226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 1479372276
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 23800000, guid: 9a76e3d0ffa5f1d4c88fed8c7d37f704, type: 2}
+--- !u!114 &1156059231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156059226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.8333333
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 23800000, guid: dfa565f6428770a40b3d5061434d6a97, type: 2}
 --- !u!1001 &1162383441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11518,7 +11613,7 @@ GameObject:
   - component: {fileID: 1250853830}
   - component: {fileID: 1250853829}
   - component: {fileID: 1250853828}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: StageArea (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11568,7 +11663,7 @@ Transform:
   - {fileID: 889945514}
   - {fileID: 882803025}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1253640246 stripped
 GameObject:
@@ -14019,7 +14114,7 @@ GameObject:
   - component: {fileID: 1615182073}
   - component: {fileID: 1615182072}
   - component: {fileID: 1615182071}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemySpawnPos1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16803,7 +16898,7 @@ GameObject:
   - component: {fileID: 1968484177}
   - component: {fileID: 1968484176}
   - component: {fileID: 1968484175}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: StageArea (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17198,7 +17293,7 @@ GameObject:
   - component: {fileID: 2026517850}
   - component: {fileID: 2026517849}
   - component: {fileID: 2026517848}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemySpawnPos2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18487,7 +18582,7 @@ GameObject:
   - component: {fileID: 2145902335}
   - component: {fileID: 2145902337}
   - component: {fileID: 2145902336}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemySpawnPos1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18642,7 +18737,7 @@ PrefabInstance:
     - target: {fileID: 3632957831921293763, guid: 24852cc91a3359b4ab956e9663ae13fd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3632957831921293763, guid: 24852cc91a3359b4ab956e9663ae13fd,
         type: 3}
@@ -18716,7 +18811,7 @@ PrefabInstance:
     - target: {fileID: 4362756693878617287, guid: 215e1849e0f84db469739273159a2a3f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4362756693878617287, guid: 215e1849e0f84db469739273159a2a3f,
         type: 3}

@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class TopDownCharacterMover : MonoBehaviour
 {
     private InputHandler _input;
-    public int dodgeRadius=7;
+    int dodgeRadius=15;
     private ParticleSystem _particleSystem;
     [Space][SerializeField]
     private InputActionAsset PlayerActions;
@@ -30,6 +30,7 @@ public class TopDownCharacterMover : MonoBehaviour
     private PointerHandler _pointerHandler;
     private void Start()
     {
+        dodgeRadius = 10;
         _particleSystem = GetComponentInChildren<ParticleSystem>();
         _pointerHandler = MousePositon.GetComponent<PointerHandler>();
          animator = GetComponent<Animator>();

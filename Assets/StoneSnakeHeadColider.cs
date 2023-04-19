@@ -27,7 +27,7 @@ public class StoneSnakeHeadColider : MonoBehaviour
     {
        
         _isIn =false;
-        Debug.Log(_isIn);
+   
     }
 
     // Update is called once per frame

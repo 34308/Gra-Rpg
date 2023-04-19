@@ -34,6 +34,7 @@ public class StoneSnakeMoving : MonoBehaviour
 
     public void AtackBeamRay()
     {
+        agent.isStopped =true;
         _particleSystem.Play();
         partcicleColider.radius = (float)4.738994;
         partcicleColider.height = (float)27.37351;
@@ -53,7 +54,7 @@ public class StoneSnakeMoving : MonoBehaviour
         
         if (other.CompareTag("Player"))
         {
-            Debug.Log("is in");
+            
             BoxCollider boxCollider = GetComponent<BoxCollider>();
            
             if (_particleSystem.isPlaying && GetComponentInChildren<particleCollider>()._isIn)
@@ -66,6 +67,8 @@ public class StoneSnakeMoving : MonoBehaviour
 
     public void AfterAttack()
     {
+        agent.isStopped = false;
+
         _particleSystem.Stop();
         partcicleColider.radius = (float)0;
         partcicleColider.height = (float)0;

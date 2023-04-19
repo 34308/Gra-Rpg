@@ -3,11 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="11dfc1ed-2c97-4e83-b138-a670728b30a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gra-Rpg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gra-Rpg/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model/enemies/Armature.002_headbutt.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/enemies/Armature.002_headbutt.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/enemies/stoneSnake.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/enemies/stoneSnake.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ActiveStage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ActiveStage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/enemies/slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/enemies/slime.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1/NavMesh.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1/NavMesh.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/StoneSnakeMoving.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StoneSnakeMoving.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownCharacterMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TopDownCharacterMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoneSnakeHeadColider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoneSnakeHeadColider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +137,8 @@
       <workItem from="1681415411653" duration="4340000" />
       <workItem from="1681455851325" duration="492000" />
       <workItem from="1681802639427" duration="3236000" />
-      <workItem from="1681805933273" duration="6148000" />
+      <workItem from="1681805933273" duration="6451000" />
+      <workItem from="1681842855443" duration="4836000" />
     </task>
     <servers />
   </component>

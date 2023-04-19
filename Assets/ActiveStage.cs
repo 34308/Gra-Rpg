@@ -27,8 +27,9 @@ public class ActiveStage : MonoBehaviour
         {
             if (other.CompareTag("Player"))
             {
+             _activated = true;
                 SpawnEnemys();
-                _activated = true;
+               
             }
         }
         
@@ -36,8 +37,14 @@ public class ActiveStage : MonoBehaviour
 
     private void SpawnEnemys()
     {
-        Instantiate(enemy1, _enemyPositions[0], Quaternion.identity);
-        Instantiate(enemy2, _enemyPositions[1], Quaternion.identity);
-        Instantiate(enemy3, _enemyPositions[2], Quaternion.identity);
+        GameObject[] enemies = { enemy1, enemy2, enemy3 };
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            if (enemies[i] != null)
+            {
+                Instantiate(enemies[i], _enemyPositions[i], Quaternion.identity);
+            }
+        }
+
     }
 }
