@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class EnemyHealthController : MonoBehaviour
 {
-    public float maxHealth = 10;
+    public float maxHealth = 2;
     private Canvas healthBarUI;
     private Slider slider;
     private Animator _animator;
