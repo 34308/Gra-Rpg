@@ -82,7 +82,11 @@ public class StoneSnakeMoving : MonoBehaviour
         agent.isStopped = true;
         CallAfterDelay.Create(3.5f, () =>
         {
-            Destroy(this.gameObject);
+            if (this != null)
+            {
+                Destroy(this.gameObject);
+            }
+            
         });
     }
     // Update is called once per frame
