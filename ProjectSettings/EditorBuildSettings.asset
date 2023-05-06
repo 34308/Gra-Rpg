@@ -4,10 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: 
+  m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Top Down Movement.unity
     guid: 3af0e682045692848b6e90a5f10c375c
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: b394c14476b6e8948b319f4ee8fab692
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 428af173abad5f94798977997c081d6e
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 5b1bb0e3612b76142acc738ad123df46,
       type: 2}

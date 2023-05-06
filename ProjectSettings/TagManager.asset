@@ -17,6 +17,8 @@ TagManager:
   - PauseMenu
   - DeathScreen
   - particleColider
+  - ToutorialText
+  - StartGameTButton
   layers:
   - Default
   - TransparentFX

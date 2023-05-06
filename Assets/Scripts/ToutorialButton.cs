@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
+using System.Threading;
 using UnityEngine.SceneManagement;
 
-public class StartGame : MonoBehaviour
+public class ToutorialButton : MonoBehaviour
 {
-    public void GoToTopDownMovement()
+    public void GoToToutorial()
     {
         Thread.Sleep(200);
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Top Down Movement");
     }
 }
