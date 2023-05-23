@@ -568,20 +568,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis lacus
-    id lectus pharetra aliquam. Duis faucibus arcu vel metus tempus semper. Curabitur
-    gravida quam a ultricies mollis. Proin feugiat mi sit amet suscipit rhoncus.
-    Aliquam et pulvinar tellus, et cursus ante. Phasellus nisi elit, sollicitudin
-    ut nisi in, vulputate luctus libero. Morbi condimentum dolor sed sem laoreet,
-    id sollicitudin ipsum sollicitudin. Phasellus porttitor, odio eget elementum
-    vulputate, eros purus dapibus lacus, eu ornare leo quam ac diam. Integer in mi
-    convallis, posuere augue nec, interdum metus. Ut elit enim, interdum et turpis
-    et, consequat pellentesque risus. In pharetra lobortis sapien id pulvinar. Nunc
-    metus lectus, sagittis in mauris sed, sagittis placerat lectus. Mauris efficitur
-    mi lorem, at interdum dolor scelerisque at. Pellentesque bibendum, nisi quis
-    sodales feugiat, lectus lacus volutpat ante, sit amet pharetra libero ipsum et
-    leo. Fusce bibendum libero ante, eget vestibulum nisi sollicitudin sed. Etiam
-    mi metus, ultrices nec rhoncus a, tincidunt in mi.
+  m_text: "Nadchodzi niesamowita przygoda w naszej grze RPG stworzonej przez Kamila
+    Martyk\u0119 i Filipa Bro\u0144ka! Wciel si\u0119 w rol\u0119 bohatera i odkryj
+    fascynuj\u0105cy \u015Bwiat pe\u0142en tajemnic, przyg\xF3d i niebezpiecze\u0144stw."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40f841c66d3c5334ab4199b8009da0eb, type: 2}
   m_sharedMaterial: {fileID: -3335219826732756677, guid: 40f841c66d3c5334ab4199b8009da0eb,
